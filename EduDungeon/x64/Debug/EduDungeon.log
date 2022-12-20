@@ -1,0 +1,3 @@
+﻿  navigation.cpp
+C:\Users\paugi\Desktop\edu\EduDungeon\EduDungeon\navigation.cpp(70,42): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+  EduDungeon.vcxproj -> C:\Users\paugi\Desktop\edu\EduDungeon\x64\Debug\EduDungeon.exe
