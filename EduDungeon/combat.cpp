@@ -72,7 +72,7 @@ void CombatScene(Scene& currentScene, Player& myPlayer, Enemy Enemies[], int wha
 			else if (enemyAction == 'D')//attack vs defend
 			{
 				myPlayer.stamina -= myPlayer.usedStamina;
-				myPlayer.usedStamina *= 0.4;
+				myPlayer.usedStamina *= 0.25;
 				Enemies[whatEnemy].health -= myPlayer.usedStamina;
 				printf("\n\nThe enemy blocks your attack, receiving only %d damage\n", myPlayer.usedStamina);
 				Enemies[whatEnemy].stamina += (Enemies[whatEnemy].maxStamina * 0.25);
@@ -94,7 +94,7 @@ void CombatScene(Scene& currentScene, Player& myPlayer, Enemy Enemies[], int wha
 			if (enemyAction == 'A')//defend vs attack
 			{
 				Enemies[whatEnemy].stamina -= Enemies[whatEnemy].usedStamina;
-				Enemies[whatEnemy].usedStamina *= 0.4;
+				Enemies[whatEnemy].usedStamina *= 0.25;
 				printf("\nYou defend the enemy blow, but receive %d damage\n", Enemies[whatEnemy].usedStamina);
 				myPlayer.health -= Enemies[whatEnemy].usedStamina;
 				myPlayer.stamina += (myPlayer.maxStamina * 0.25);
@@ -204,7 +204,7 @@ void CombatScene(Scene& currentScene, Player& myPlayer, Enemy Enemies[], int wha
 		
 		else if (myPlayer.health <= 0) {
 			myPlayer.gold -= 200;
-			cout << endl << "You lost your life to one of Radev's minion!" << endl;
+			cout << endl << "You lost your life to one of RADEV's MINION!" << endl;
 			currentScene = NAVIGATION;
 		}
 	
