@@ -45,7 +45,7 @@ void NavigationScene(Scene& currentScene, Player& myPlayer, Enemy Enemies[], Che
 void PlayerAction(char& navigationAction, Player& myPlayer, Map map[][5], bool& validCommand) {
 	map[myPlayer.X][myPlayer.Y].isUsed = false;
 
-	if (navigationAction == 'W' && myPlayer.X != 0) {
+	if (navigationAction == 'W' && myPlayer.Y!= 0) {
 		myPlayer.moves--;
 		myPlayer.Y -= 1;
 		validCommand = true;
