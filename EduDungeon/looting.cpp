@@ -11,6 +11,8 @@ void LootingScene(Scene& currentScene, Player& myPlayer, Chest Chests[], int wha
 	} while (numberOfGear == usedGear);
 	usedGear = numberOfGear;
 	WhatGear(numberOfGear, myPlayer);
+	if (myPlayer.stamina < 0)
+		myPlayer.stamina = 0;
 
 	if (Chests[whatChest].isPotion >= 1) {
 		cout << endl << "       > The Conservative gives you a potion!" << endl;

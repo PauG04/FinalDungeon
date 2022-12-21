@@ -1,2 +1,15 @@
-﻿  gameover.cpp
+﻿  combat.cpp
+C:\Users\GIRÓGARCÍAPAU\Desktop\FinalDungeon\EduDungeon\combat.cpp(42,76): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\GIRÓGARCÍAPAU\Desktop\FinalDungeon\EduDungeon\combat.cpp(75,29): warning C4244: '*=': conversion from 'double' to 'int', possible loss of data
+C:\Users\GIRÓGARCÍAPAU\Desktop\FinalDungeon\EduDungeon\combat.cpp(78,66): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+C:\Users\GIRÓGARCÍAPAU\Desktop\FinalDungeon\EduDungeon\combat.cpp(97,39): warning C4244: '*=': conversion from 'double' to 'int', possible loss of data
+C:\Users\GIRÓGARCÍAPAU\Desktop\FinalDungeon\EduDungeon\combat.cpp(100,46): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+C:\Users\GIRÓGARCÍAPAU\Desktop\FinalDungeon\EduDungeon\combat.cpp(108,46): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+C:\Users\GIRÓGARCÍAPAU\Desktop\FinalDungeon\EduDungeon\combat.cpp(109,66): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+C:\Users\GIRÓGARCÍAPAU\Desktop\FinalDungeon\EduDungeon\combat.cpp(116,46): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+C:\Users\GIRÓGARCÍAPAU\Desktop\FinalDungeon\EduDungeon\combat.cpp(144,66): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+C:\Users\GIRÓGARCÍAPAU\Desktop\FinalDungeon\EduDungeon\combat.cpp(164,45): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+C:\Users\GIRÓGARCÍAPAU\Desktop\FinalDungeon\EduDungeon\combat.cpp(172,45): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+C:\Users\GIRÓGARCÍAPAU\Desktop\FinalDungeon\EduDungeon\combat.cpp(173,67): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+C:\Users\GIRÓGARCÍAPAU\Desktop\FinalDungeon\EduDungeon\combat.cpp(179,45): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
   EduDungeon.vcxproj -> C:\Users\GIRÓGARCÍAPAU\Desktop\FinalDungeon\x64\Debug\EduDungeon.exe

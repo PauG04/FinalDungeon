@@ -44,7 +44,11 @@ void CombatScene(Scene& currentScene, Player& myPlayer, Enemy Enemies[], int wha
 		switch (combatAction) {
 		case 'A':
 			cout << endl << "Enter the attack value (Max " << myPlayer.stamina << "): ";
-			cin >> myPlayer.usedStamina;
+			do
+			{
+				cin >> myPlayer.usedStamina;
+
+			} while (myPlayer.usedStamina > myPlayer.stamina);
 
 			if (enemyAction == 'A')//attack vs attack
 			{
@@ -216,7 +220,7 @@ void bar(int barLenght, int maxBarLenght) {//barres vida i stamina
 	cout << " [";
 	for (int digits = (barLenght * 10 / maxBarLenght) + 1; digits > 0; digits--)
 		cout << '=';
-	for (int digits = (barLenght * 10 / maxBarLenght) + 1; digits < 10; digits++)
+	for (int digits = (barLenght * 10 / maxBarLenght) + 1; digits <= 10; digits++)
 		cout << ' ';
 	cout << ']';
 }
