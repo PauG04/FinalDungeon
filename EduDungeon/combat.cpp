@@ -7,7 +7,7 @@ void CombatScene(Scene& currentScene, Player& myPlayer, Enemy Enemies[], int wha
 		cout << " ? HP" << endl;
 
 		if (Enemies[whatEnemy].stamina == 0)
-			cout << " [          ]";
+			cout << " [           ]";
 		else
 			bar(Enemies[whatEnemy].stamina, Enemies[whatEnemy].maxStamina);
 		cout << " ? Stamina" << endl;
@@ -18,7 +18,7 @@ void CombatScene(Scene& currentScene, Player& myPlayer, Enemy Enemies[], int wha
 		cout << ' ' << myPlayer.health << '/' << myPlayer.maxHealth << " HP" << endl;
 
 		if (myPlayer.stamina == 0)
-			cout << " [          ]";
+			cout << " [           ]";
 		else
 			bar(myPlayer.stamina, myPlayer.maxStamina);
 		cout << ' ' << myPlayer.stamina << '/' << myPlayer.maxStamina << " Stamina" << endl;
