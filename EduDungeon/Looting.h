@@ -8,3 +8,4 @@
 
 void LootingScene(Scene& currentScene, Player& myPlayer, Chest Chests[], int whatChest, Map map[][5]);
 void WhatGear(int numberOfGear, Player& myPlayer);
+

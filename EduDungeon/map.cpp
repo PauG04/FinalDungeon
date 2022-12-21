@@ -1,6 +1,6 @@
 #include "Map.h"
 
-void PrintMap(Player& myPlayer, Enemy Enemies[], Chest Chests[], Map map[][5]) {
+void PrintMap(Player& myPlayer, Enemy Enemies[], Chest Chests[], Map map[][5], int numberOfEnemies) {
 	cout << endl;
 	//TOP PART
 	for (int i = 0; i < 5; i++)
@@ -16,7 +16,7 @@ void PrintMap(Player& myPlayer, Enemy Enemies[], Chest Chests[], Map map[][5]) {
 		cout << endl;
 		//MIDDLE PART
 		for (int j = 0; j < 5; j++) {
-			cout << "| " << PrintCharacter(i, j, myPlayer, Enemies, Chests) << " |";
+			cout << "| " << PrintCharacter(i, j, myPlayer, Enemies, Chests, numberOfEnemies) << " |";
 
 		}
 		cout << endl;
@@ -26,10 +26,10 @@ void PrintMap(Player& myPlayer, Enemy Enemies[], Chest Chests[], Map map[][5]) {
 	}
 }
 
-void GeneratePositions(Player& myPlayer, Enemy Enemies[], Chest Chests[], Map map[][5]) {
+void GeneratePositions(Player& myPlayer, Enemy Enemies[], Chest Chests[], Map map[][5], int numberOfEnemies) {
 	map[myPlayer.X][myPlayer.Y].isUsed = true;
 	
-	EnemiesSpawn(Enemies, map);
+	EnemiesSpawn(Enemies, map, numberOfEnemies);
 
 	for (int i = 0; i < 2; i++) {
 		do {
@@ -41,8 +41,8 @@ void GeneratePositions(Player& myPlayer, Enemy Enemies[], Chest Chests[], Map ma
 
 }
 
-void EnemiesSpawn(Enemy Enemies[], Map map[][5]) {
-	for (int i = 0; i < 7; i++) {
+void EnemiesSpawn(Enemy Enemies[], Map map[][5], int numberOfEnemies) {
+	for (int i = 0; i < numberOfEnemies; i++) {
 		if (!Enemies[i].isDead) {
 			do {
 				Enemies[i].X = RandomNumber(0, 4);
@@ -53,10 +53,10 @@ void EnemiesSpawn(Enemy Enemies[], Map map[][5]) {
 	}
 }
 
-char PrintCharacter(int i, int j, Player& myPlayer, Enemy Enemies[], Chest Chests[]) {
+char PrintCharacter(int i, int j, Player& myPlayer, Enemy Enemies[], Chest Chests[], int numberOfEnemies) {
 	if (myPlayer.X == j && myPlayer.Y == i)
 		return 'P';
-	for (int k = 0; k < 5; k++) {
+	for (int k = 0; k < numberOfEnemies; k++) {
 		if (Enemies[k].X == j && Enemies[k].Y == i)
 			return 'E';
 	}

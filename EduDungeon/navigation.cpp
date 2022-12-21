@@ -1,29 +1,29 @@
 #include "Navigation.h"
 
-void NavigationScene(Scene& currentScene, Player& myPlayer, Enemy Enemies[], Chest Chests[], Map map[][5], int& whatEnemy, int& whatChest) {
+void NavigationScene(Scene& currentScene, Player& myPlayer, Enemy Enemies[], Chest Chests[], Map map[][5], int& whatEnemy, int& whatChest, int numberOfEnemies) {
 	
 	bool validCommand = false;
 	while (!validCommand) {
 		if (myPlayer.health > 0) {
-			if (EnemiesAlive(Enemies) || ChestsClosed(Chests)) {
+			if (EnemiesAlive(Enemies, numberOfEnemies) || ChestsClosed(Chests)) {
 				if (myPlayer.moves == 0) {
-					for (int i = 0; i < 5; i++) {
+					for (int i = 0; i < numberOfEnemies; i++) {
 						map[Enemies[i].X][Enemies[i].Y].isUsed = false;
 					}
 					map[myPlayer.X][myPlayer.Y].isUsed = true;
-					EnemiesSpawn(Enemies, map);
+					EnemiesSpawn(Enemies, map, numberOfEnemies);
 					myPlayer.moves = myPlayer.maxMoves;
 				}
 				cout << "------DUNGEON------\n\n E-- > Enemy    P-- > Player    C-- > Chest\n\nHealth:" << myPlayer.health << " / " << myPlayer.maxHealth << "\nPotions: "
 					<< myPlayer.potions << " / " << MaxPotions << "\nMoves: " << myPlayer.moves << " / " << myPlayer.maxMoves;
-				PrintMap(myPlayer, Enemies, Chests, map);
+				PrintMap(myPlayer, Enemies, Chests, map, numberOfEnemies);
 				cout << "____________________\n\nW A S D --> Move\nP --> Potion\nEnter your action: ";
 
 				char navigationAction;
 				cin >> navigationAction;
 				PlayerAction(navigationAction, myPlayer, map, validCommand);
 
-				EnemyFound(myPlayer, Enemies, currentScene, whatEnemy);
+				EnemyFound(myPlayer, Enemies, currentScene, whatEnemy, numberOfEnemies);
 				ChestFound(myPlayer, Chests, currentScene, whatChest);
 			}
 			else {
@@ -81,8 +81,8 @@ void PlayerAction(char& navigationAction, Player& myPlayer, Map map[][5], bool& 
 
 }
 
-void EnemyFound(Player& myPlayer, Enemy Enemies[], Scene& currentScene, int& whatEnemy) {
-	for (int i = 0; i < 5; i++) {
+void EnemyFound(Player& myPlayer, Enemy Enemies[], Scene& currentScene, int& whatEnemy, int numberOfEnemies) {
+	for (int i = 0; i < numberOfEnemies; i++) {
 		if (myPlayer.X == Enemies[i].X && myPlayer.Y == Enemies[i].Y) {
 			currentScene = COMBAT;
 			whatEnemy = i;
@@ -99,8 +99,8 @@ void ChestFound(Player& myPlayer, Chest Chests[], Scene& currentScene, int& what
 	}
 }
 
-bool EnemiesAlive(Enemy Enemies[]) {
-	for (int i = 0; i < 5; i++)
+bool EnemiesAlive(Enemy Enemies[], int numberOfEnemies) {
+	for (int i = 0; i < numberOfEnemies; i++)
 		if (!Enemies[i].isDead)
 			return true;
 	return false;

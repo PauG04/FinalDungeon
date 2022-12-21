@@ -16,8 +16,9 @@ int main() {
 		Player myPlayer;
 		myPlayer.Init();
 
-		Enemy Enemies[5];
-		for (int i = 0; i < 5; i++)
+		int numberOfEnemies = RandomNumber(5, 7);
+		Enemy Enemies[7];
+		for (int i = 0; i < numberOfEnemies; i++)
 			Enemies[i].Init();
 
 		Chest Chests[2];
@@ -32,7 +33,7 @@ int main() {
 		int whatEnemy = 0, whatChest = 0;
 		string name;
 
-		GeneratePositions(myPlayer, Enemies, Chests, map);
+		GeneratePositions(myPlayer, Enemies, Chests, map, numberOfEnemies);
 
 		bool finished = false;
 
@@ -43,7 +44,7 @@ int main() {
 				StartScene(currentScene, name);
 				break;
 			case NAVIGATION:
-				NavigationScene(currentScene, myPlayer, Enemies, Chests, map, whatEnemy, whatChest);
+				NavigationScene(currentScene, myPlayer, Enemies, Chests, map, whatEnemy, whatChest, numberOfEnemies);
 				break;
 			case COMBAT:
 				CombatScene(currentScene, myPlayer, Enemies, whatEnemy, map);

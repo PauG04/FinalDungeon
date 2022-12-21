@@ -10,7 +10,7 @@ struct Map
 	void Init();
 };
 
-void PrintMap(Player& myPlayer, Enemy Enemies[], Chest Chests[], Map map[][5]);
-void GeneratePositions(Player& myPlayer, Enemy Enemies[], Chest Chests[], Map map[][5]);
-void EnemiesSpawn(Enemy Enemies[], Map map[][5]);
-char PrintCharacter(int i, int j, Player& myPlayer, Enemy Enemies[], Chest Chests[]);
+void PrintMap(Player& myPlayer, Enemy Enemies[], Chest Chests[], Map map[][5], int numberOfEnemies);
+void GeneratePositions(Player& myPlayer, Enemy Enemies[], Chest Chests[], Map map[][5], int numberOfEnemies);
+void EnemiesSpawn(Enemy Enemies[], Map map[][5], int numberOfEnemies);
+char PrintCharacter(int i, int j, Player& myPlayer, Enemy Enemies[], Chest Chests[], int numberOfEnemies);

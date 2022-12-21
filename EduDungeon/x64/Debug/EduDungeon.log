@@ -1,3 +1,2 @@
-﻿  main.cpp
-C:\Users\GIRÓGARCÍAPAU\Desktop\FinalDungeon\EduDungeon\main.cpp(5,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+﻿  looting.cpp
   EduDungeon.vcxproj -> C:\Users\GIRÓGARCÍAPAU\Desktop\FinalDungeon\x64\Debug\EduDungeon.exe
