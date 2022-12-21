@@ -36,7 +36,7 @@ void LootingScene(Scene& currentScene, Player& myPlayer, Chest Chests[], int wha
 void WhatGear(int numberOfGear, Player& myPlayer) {
 	switch (numberOfGear)
 	{
-	case 1: //PAU'S COCACOLA
+	case 1: 
 		myPlayer.gold += 85;
 		myPlayer.maxMoves += 1;
 		myPlayer.maxStamina += 30;

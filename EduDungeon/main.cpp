@@ -1,6 +1,5 @@
 #include "Main.h"
 
-//no hi ha enemics randoms
 int main() {
 	srand(time(NULL));
 

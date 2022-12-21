@@ -3,9 +3,9 @@
 void Player::Init() {
 	X = 2;
 	Y = 3;
-	maxHealth = RandomNumber(90, 110);
+	maxHealth = RandomNumber(900, 1100);
 	health = maxHealth;
-	maxStamina = RandomNumber(90, 110);
+	maxStamina = RandomNumber(900, 1100);
 	stamina = maxStamina;
 	maxMoves = 3;
 	moves = 3;
