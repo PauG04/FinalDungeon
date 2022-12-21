@@ -3,7 +3,7 @@
 void LootingScene(Scene& currentScene, Player& myPlayer, Chest Chests[], int whatChest, Map map[][5]) {
 	myPlayer.gold += Chests[whatChest].gold;
 
-	cout << "- - - - - - CHEST - - - - - -" << endl << endl << " > You open the chest and it contains the following:" << endl << endl << "       > " << Chests[whatChest].gold << " gold!" << endl << "       > The Chest contains Gear!" << endl;
+	cout << "- - - - - - CONSERVATIVE - - - - - -" << endl << endl << " > You come across a Conservative and they give you the following:" << endl << endl << "       > " << Chests[whatChest].gold << " gold!" << endl << "       > They give you the following!" << endl;
 
 	int usedGear = 0, numberOfGear = RandomNumber(1, 11);
 	do {
@@ -13,7 +13,7 @@ void LootingScene(Scene& currentScene, Player& myPlayer, Chest Chests[], int wha
 	WhatGear(numberOfGear, myPlayer);
 
 	if (Chests[whatChest].isPotion >= 1) {
-		cout << endl << "       > The Chest contains a potion!" << endl;
+		cout << endl << "       > The Conservative gives you a potion!" << endl;
 		if (myPlayer.potions >= MaxPotions)
 			cout << "              > You already have max potions!";
 		else {

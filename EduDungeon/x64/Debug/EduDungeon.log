@@ -1,29 +1,3 @@
-﻿  chest.cpp
-  combat.cpp
-C:\Users\MARTÍNEZMEMBRILLAALE\Documents\GitHub\FinalDungeon\EduDungeon\combat.cpp(42,76): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\MARTÍNEZMEMBRILLAALE\Documents\GitHub\FinalDungeon\EduDungeon\combat.cpp(71,29): warning C4244: '*=': conversion from 'double' to 'int', possible loss of data
-C:\Users\MARTÍNEZMEMBRILLAALE\Documents\GitHub\FinalDungeon\EduDungeon\combat.cpp(74,66): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
-C:\Users\MARTÍNEZMEMBRILLAALE\Documents\GitHub\FinalDungeon\EduDungeon\combat.cpp(93,39): warning C4244: '*=': conversion from 'double' to 'int', possible loss of data
-C:\Users\MARTÍNEZMEMBRILLAALE\Documents\GitHub\FinalDungeon\EduDungeon\combat.cpp(96,46): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
-C:\Users\MARTÍNEZMEMBRILLAALE\Documents\GitHub\FinalDungeon\EduDungeon\combat.cpp(104,46): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
-C:\Users\MARTÍNEZMEMBRILLAALE\Documents\GitHub\FinalDungeon\EduDungeon\combat.cpp(105,66): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
-C:\Users\MARTÍNEZMEMBRILLAALE\Documents\GitHub\FinalDungeon\EduDungeon\combat.cpp(112,46): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
-C:\Users\MARTÍNEZMEMBRILLAALE\Documents\GitHub\FinalDungeon\EduDungeon\combat.cpp(140,66): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
-C:\Users\MARTÍNEZMEMBRILLAALE\Documents\GitHub\FinalDungeon\EduDungeon\combat.cpp(160,45): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
-C:\Users\MARTÍNEZMEMBRILLAALE\Documents\GitHub\FinalDungeon\EduDungeon\combat.cpp(168,45): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
-C:\Users\MARTÍNEZMEMBRILLAALE\Documents\GitHub\FinalDungeon\EduDungeon\combat.cpp(169,67): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
-C:\Users\MARTÍNEZMEMBRILLAALE\Documents\GitHub\FinalDungeon\EduDungeon\combat.cpp(175,45): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
-  enemy.cpp
-  gameover.cpp
-  looting.cpp
-  main.cpp
-C:\Users\MARTÍNEZMEMBRILLAALE\Documents\GitHub\FinalDungeon\EduDungeon\main.cpp(5,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  map.cpp
-  math.cpp
-  navigation.cpp
-C:\Users\MARTÍNEZMEMBRILLAALE\Documents\GitHub\FinalDungeon\EduDungeon\navigation.cpp(70,42): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
-  player.cpp
-  start.cpp
-  Generating Code...
-  LINK : C:\Users\MARTÍNEZMEMBRILLAALE\Documents\GitHub\FinalDungeon\x64\Debug\EduDungeon.exe not found or not built by the last incremental link; performing full link
-  EduDungeon.vcxproj -> C:\Users\MARTÍNEZMEMBRILLAALE\Documents\GitHub\FinalDungeon\x64\Debug\EduDungeon.exe
+﻿  main.cpp
+C:\Users\GIRÓGARCÍAPAU\Desktop\FinalDungeon\EduDungeon\main.cpp(5,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  EduDungeon.vcxproj -> C:\Users\GIRÓGARCÍAPAU\Desktop\FinalDungeon\x64\Debug\EduDungeon.exe

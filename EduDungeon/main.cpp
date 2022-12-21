@@ -4,6 +4,8 @@
 int main() {
 	srand(time(NULL));
 
+	system("color 0A");
+
 	Scene currentScene = START;
 
 	bool isPlaying = true;
